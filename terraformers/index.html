@@ -1,0 +1,14 @@
+<!-- Basic UI elements in HTML -->
+<div id="populationDisplay">Population: <span id="populationCount"></span></div>
+<div id="qualityOfLifeDisplay">Quality of Life: <span id="qualityOfLife"></span></div>
+<div id="resourcesDisplay">Water: <span id="waterAmount"></span></div>
+
+<js>
+    function renderUI() {
+    document.getElementById("populationCount").innerText = Math.floor(gameState.population.total);
+    document.getElementById("qualityOfLife").innerText = (gameState.population.qualityOfLife * 100).toFixed(1) + "%";
+    document.getElementById("waterAmount").innerText = gameState.resources.water;
+    // Update additional UI elements
+}
+</js>
+<!-- Additional UI elements as needed -->
